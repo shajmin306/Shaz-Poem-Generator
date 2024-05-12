@@ -17,17 +17,24 @@ h1 {
   text-align: center;
   padding-top: 30px;
 }
-header {
-  margin-bottom: 10px;
-}
 
-form {
+.form-container {
   padding: 30px;
   border-radius: 10px;
+  margin-bottom: 10px;
+  color: black;
+}
+form {
   display: flex;
-  margin-bottom: 30px;
 }
 
+.hint {
+  margin-top: 10px;
+  line-height: 1.5;
+  font-family: "Zeyada", cursive;
+  font-size: 18px;
+  color: white;
+}
 .topic-input {
   padding: 10px;
   border-radius: 5px;
@@ -42,20 +49,36 @@ form {
   padding: 10px;
   border-radius: 5px;
   border: none;
+  width: 20%;
   color: white;
   box-shadow: 0px 20px 60px rgba (65, 50, 100, 1);
 }
+.submit-button:hover {
+  background-color: white;
+  color: #f17378;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
 .poem {
+  background-color: white;
   font-family: "Zeyada", cursive;
   font-weight: bolder;
   font-style: normal;
   font-size: 20px;
-  color: white;
-  padding: 20px;
+  color: #f17378;
+  margin: 30px;
+  padding: 10px;
+  border-radius: 5px;
   line-height: 1.5;
-  border-left: 2px solid white;
+  text-align: center;
+  border-left: 2px solid #f17378;
+  border-bottom: 2px solid #f17378;
 }
 
+.hidden {
+  display: none;
+}
 footer {
   text-align: center;
   font-size: 12px;
@@ -65,4 +88,19 @@ footer {
 
 a {
   color: white;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
